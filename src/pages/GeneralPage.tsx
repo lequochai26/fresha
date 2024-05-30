@@ -13,7 +13,7 @@ export default function GeneralPage() {
         // Whole page
         <div className="w-screen h-screen flex flex-col">
             {/* Header bar */}
-            <div className="px-5 py-5 flex justify-start items-center border-b border-solid border-b-gray-300">
+            <div className="px-5 py-3 flex justify-start items-center border-b border-solid border-b-gray-300">
                 {/* Fresha logo */}
                 <div className="flex-1 h-fit">
                     <a href="/">
