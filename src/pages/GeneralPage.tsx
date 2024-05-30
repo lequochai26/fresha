@@ -1,25 +1,30 @@
 import Button from "../components/Button";
 import ProfileButton from "../components/ProfileButton";
 import User from "../models/User";
+import freshaLogo from '../icons/fresha.svg';
+import findIcon from '../icons/find.svg';
+import newsIcon from '../icons/news.svg';
+import notificationsIcon from '../icons/notifications.svg';
+import walletsIcon from '../icons/wallets.svg';
 
 export default function GeneralPage() {
     // Design
     return (
         // Whole page
-        <div className="w-screen h-screen">
+        <div className="w-screen h-screen flex flex-col">
             {/* Header bar */}
             <div className="px-5 py-5 flex justify-start items-center border-b border-solid border-b-gray-300">
                 {/* Fresha logo */}
                 <div className="flex-1 h-fit">
                     <a href="/">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.8 24" pointer-events="none" className="inline-block w-20"><title>Fresha</title><path d="M51.5 2.1h3.9v8.1c1.3-1.9 4-2.5 6.2-1.6 2.2.9 2.9 2.5 3 2.7.2.5.4 1 .5 1.5.6 3.6-.6 7.2.5 10.7h-3.8c-1-2.5-.4-5.3-.4-7.9 0-.7 0-1.5-.4-2.2-.5-.9-1.5-1.6-2.5-1.6-1.1 0-2.1.6-2.6 1.5-.4.8-.4 1.8-.4 2.7v7.5h-3.9l-.1-21.4zM36 15.7c.1-4.3-2.6-7.5-6.8-7.5-2.8 0-5.2 1.4-6.5 3.8-1.4 2.6-1.3 6.3.4 8.8 2.5 3.4 7.6 4.2 12.5 1.9l-1.2-3.1c-4.1 1.8-8.5 1.3-8.8-2.4H36v-1.5zm-10.3-1.5c.3-.8.7-1.4 1.3-1.9 1.2-.9 3.3-1 4.4-.1.5.4.9 1.1 1.2 1.9h-6.9zM13.1 13.9s0-2.3-1.9-2.3H6.9v12.1H3V11.6H0V8.3h3V5.7C3 3.4 5.1 0 9.7 0s6.4 3.9 6.4 3.9l-3 2.1s-.8-2.5-3.3-2.5C8.7 3.5 7 4.4 7 6.2v2h6.1c2.7 0 3.4 2 3.4 2 1-2.4 4.6-2.1 5.3-2v3.1c-2.5-.2-4.8 1.2-4.8 4.1v8h-3.9v-9.5zM48.9 16.2c-1.2-1.2-4.3-1.6-6.3-2-1-.2-1.8-.4-1.8-1.4 0-1.2 1.2-1.5 2.4-1.5s2.4.5 3.1 1.5l3-1.6c-1.7-3-6.2-3.6-9.1-2.4-.9.4-1.6 1-2.1 1.7-1.1 1.5-1 4.1.3 5.3.7.7 1.9 1.2 3.4 1.5l2.8.5c1 .2 1.9.4 1.9 1.5 0 1.3-1.4 1.6-2.6 1.6-3.2 0-3.8-3-3.8-3L36.4 19c.2 1 1.5 5 7.4 5 3.3 0 6.2-1.3 6.3-4.8-.1-1.3-.5-2.3-1.2-3zM81.2 20.8c-.7 0-1.3-.4-1.3-1.4 0-.5-.1-2.2-.1-2.6 0-2.6.1-5.1-1.7-6.9-2-2-6.6-2.2-9-.6-.9.5-1.7 1.2-2.3 2.1l2.3 2.4c.9-1.5 2.2-2.2 3.7-2.2 1.4-.1 2.6.6 3.1 2-3.1.8-7.1 1.1-8.8 4.3-.8 1.5-.6 3.4.6 4.7.9 1 2.4 1.3 3.8 1.3 2.2 0 4.3-.5 5.6-2.5.7 1.7 2.2 2.5 4 2.5.3 0 .6-.1.8-.2v-3c-.2.1-.4.1-.7.1zm-5.3-3.1c.1 2.2-1.7 3.4-3.7 3.4-1.1 0-1.8-.5-1.8-1.6 0-1.2 1-1.6 2.1-1.9l3.4-1v1.1z"></path></svg>
+                        <img src={freshaLogo} alt="Fresha's logo" className="inline-block w-20" />
                     </a>
                 </div>
 
                 {/* Find button */}
                 <Button
                     value={
-                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-8 h-8"><path fill-rule="evenodd" d="M10.875 3.75a7.125 7.125 0 1 0 0 14.25 7.125 7.125 0 0 0 0-14.25M2.25 10.875a8.625 8.625 0 1 1 15.231 5.546l4.05 4.049a.75.75 0 1 1-1.061 1.06l-4.05-4.049a8.625 8.625 0 0 1-14.17-6.606" clip-rule="evenodd"></path></svg>
+                        <img src={findIcon} alt="Find" className="w-8 h-8" />
                     }
                     tooltip="Find"
                     tooltipId="btnFind"
@@ -29,7 +34,7 @@ export default function GeneralPage() {
                 {/* News button */}
                 <Button
                     value={
-                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-8 h-8"><path fill-rule="evenodd" d="M11.058 1.275a1.48 1.48 0 0 1 1.887.002c.931.758 2.948 2.639 4.063 5.538.378.982.649 2.072.743 3.264l2.838 3.406a1.46 1.46 0 0 1 .307 1.292l-1.151 5.213v.002a1.5 1.5 0 0 1-2.4.844l-2.608-2.086H9.263l-2.607 2.086a1.5 1.5 0 0 1-2.4-.844v-.002l-1.152-5.213a1.46 1.46 0 0 1 .307-1.292l2.783-3.332c.087-1.223.363-2.34.753-3.344 1.127-2.9 3.168-4.78 4.11-5.534m-3.383 9.241.003-.07a10 10 0 0 1 .668-3.094c.992-2.556 2.813-4.237 3.654-4.91.834.68 2.626 2.36 3.608 4.911.34.884.587 1.882.658 2.991a1 1 0 0 0 .008.136c.098 1.929-.334 4.19-1.717 6.77H9.439c-1.404-2.565-1.852-4.814-1.764-6.734m-1.423 1.908-1.685 2.02 1.152 5.22 2.317-1.854c-1.038-1.938-1.586-3.738-1.784-5.386m9.707 5.383 2.322 1.857 1.152-5.22-1.723-2.07c-.186 1.66-.723 3.475-1.75 5.433M9.75 21a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1-.75-.75" clip-rule="evenodd"></path><path d="M12 10.125a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25"></path></svg>
+                        <img src={newsIcon} alt="News" className="w-8 h-8" />
                     }
                     tooltip="News"
                     tooltipId="btnNews"
@@ -39,7 +44,7 @@ export default function GeneralPage() {
                 {/* Notifications button */}
                 <Button
                     value={
-                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-8 h-8"><path fill-rule="evenodd" d="M12.042 3.75a5.99 5.99 0 0 0-5.566 3.696 5.6 5.6 0 0 0-.457 2.297v.757c0 3.462-.726 5.547-1.423 6.75h14.808c-.697-1.203-1.423-3.288-1.423-6.75v-.666c0-3.323-2.652-6.059-5.939-6.084m-2.873-.94a7.5 7.5 0 0 1 2.882-.56h.002c4.138.031 7.428 3.464 7.428 7.584v.666c0 3.25.68 5.065 1.221 6a1.5 1.5 0 0 1-1.293 2.25H15.75a3.75 3.75 0 1 1-7.5 0H4.59a1.5 1.5 0 0 1-1.294-2.25c.542-.935 1.222-2.75 1.222-6v-.747a7.1 7.1 0 0 1 .571-2.881 7.5 7.5 0 0 1 4.08-4.063m.58 15.94a2.25 2.25 0 0 0 4.5 0z" clip-rule="evenodd"></path></svg>
+                        <img src={notificationsIcon} alt="Notifications" className="w-8 h-8" />
                     }
                     tooltip="Notificatons"
                     tooltipId="btnNotifications"
@@ -49,7 +54,7 @@ export default function GeneralPage() {
                 {/* Wallets button */}
                 <Button
                     value={
-                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-8 h-8"><path fill-rule="evenodd" d="M5.25 5.25a.75.75 0 0 0 0 1.5h15a1.5 1.5 0 0 1 1.5 1.5v10.5a1.5 1.5 0 0 1-1.5 1.5h-15A2.25 2.25 0 0 1 3 18V6a2.25 2.25 0 0 1 2.25-2.25H18a.75.75 0 0 1 0 1.5zM4.5 8.121V18a.75.75 0 0 0 .75.75h15V8.25h-15a2.3 2.3 0 0 1-.75-.129" clip-rule="evenodd"></path><path d="M16.875 14.625a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25"></path></svg>
+                        <img src={walletsIcon} alt="Wallets" className="w-8 h-8" />
                     }
                     tooltip="Wallets"
                     tooltipId="btnWallets"
@@ -60,6 +65,11 @@ export default function GeneralPage() {
                 <ProfileButton
                     user={ User.getTestIntance() }
                 />
+            </div>
+
+            {/* View area */}
+            <div className="bg-red-600 flex-1">
+                Hello
             </div>
         </div>
     );
