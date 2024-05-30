@@ -13,7 +13,7 @@ export default function Button({ value, tooltip, tooltipId, className, onClick }
     // Design:
     return (
         <>
-            <div className={`${className} cursor-pointer`} data-tooltip-id={tooltipId} data-tooltip-content={tooltip} onClick={onClick}>
+            <div className={`${className} cursor-pointer rounded-full hover:bg-gray-100 aspect-square flex flex-col justify-center`} data-tooltip-id={tooltipId} data-tooltip-content={tooltip} onClick={onClick}>
                 { value }
             </div>
             {
