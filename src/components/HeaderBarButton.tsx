@@ -1,7 +1,7 @@
 import { MouseEventHandler } from "react";
 import { Tooltip } from "react-tooltip";
 
-export interface ButtonProperties {
+export interface HeaderBarButtonProperties {
     value: JSX.Element,
     tooltip?: string;
     tooltipId?: string,
@@ -9,7 +9,7 @@ export interface ButtonProperties {
     onClick?: MouseEventHandler
 };
 
-export default function Button({ value, tooltip, tooltipId, className, onClick }: ButtonProperties) {
+export default function HeaderBarButton({ value, tooltip, tooltipId, className, onClick }: HeaderBarButtonProperties) {
     // Design:
     return (
         <>

@@ -1,4 +1,4 @@
-import Button from "../components/Button";
+import HeaderBarButton from "../components/HeaderBarButton";
 import ProfileButton from "../components/ProfileButton";
 import User from "../models/User";
 import freshaLogo from '../icons/fresha.svg';
@@ -37,7 +37,7 @@ export default function GeneralPage() {
                 </div>
 
                 {/* Find button */}
-                <Button
+                <HeaderBarButton
                     value={
                         <img src={findIcon} alt="Find" className="w-8 h-8" />
                     }
@@ -47,7 +47,7 @@ export default function GeneralPage() {
                 />
 
                 {/* News button */}
-                <Button
+                <HeaderBarButton
                     value={
                         <img src={newsIcon} alt="News" className="w-8 h-8" />
                     }
@@ -57,7 +57,7 @@ export default function GeneralPage() {
                 />
 
                 {/* Notifications button */}
-                <Button
+                <HeaderBarButton
                     value={
                         <img src={notificationsIcon} alt="Notifications" className="w-8 h-8" />
                     }
@@ -67,7 +67,7 @@ export default function GeneralPage() {
                 />
 
                 {/* Wallets button */}
-                <Button
+                <HeaderBarButton
                     value={
                         <img src={walletsIcon} alt="Wallets" className="w-8 h-8" />
                     }
