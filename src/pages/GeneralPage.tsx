@@ -2,10 +2,6 @@ import HeaderBarButton from "../components/HeaderBarButton";
 import ProfileButton from "../components/ProfileButton";
 import User from "../models/User";
 import freshaLogo from '../icons/fresha.svg';
-import findIcon from '../icons/find.svg';
-import newsIcon from '../icons/news.svg';
-import notificationsIcon from '../icons/notifications.svg';
-import walletsIcon from '../icons/wallets.svg';
 import SidebarButton from "../components/SidebarButton";
 import homeIcon from '../icons/home.svg';
 import calendarIcon from '../icons/calendar.svg';
@@ -21,6 +17,7 @@ import addonsIcon from '../icons/addons.svg';
 import businessSettings from '../icons/businessSettings.svg';
 import NotFoundView from "../views/NotFoundView";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import getHeaderBarButtons from "../data/HeaderBarButtons";
 
 export default function GeneralPage() {
     // Design
@@ -36,45 +33,13 @@ export default function GeneralPage() {
                     </a>
                 </div>
 
-                {/* Find button */}
-                <HeaderBarButton
-                    value={
-                        <img src={findIcon} alt="Find" className="w-8 h-8" />
-                    }
-                    tooltip="Find"
-                    tooltipId="btnFind"
-                    className="px-2"
-                />
-
-                {/* News button */}
-                <HeaderBarButton
-                    value={
-                        <img src={newsIcon} alt="News" className="w-8 h-8" />
-                    }
-                    tooltip="News"
-                    tooltipId="btnNews"
-                    className="px-2"
-                />
-
-                {/* Notifications button */}
-                <HeaderBarButton
-                    value={
-                        <img src={notificationsIcon} alt="Notifications" className="w-8 h-8" />
-                    }
-                    tooltip="Notificatons"
-                    tooltipId="btnNotifications"
-                    className="px-2"
-                />
-
-                {/* Wallets button */}
-                <HeaderBarButton
-                    value={
-                        <img src={walletsIcon} alt="Wallets" className="w-8 h-8" />
-                    }
-                    tooltip="Wallets"
-                    tooltipId="btnWallets"
-                    className="px-2"
-                />
+                {/* Header bar buttons embedding */}
+                {
+                    getHeaderBarButtons()
+                        .map(
+                            props => HeaderBarButton(props)
+                        )
+                }
 
                 {/* Profile button */}
                 <ProfileButton
