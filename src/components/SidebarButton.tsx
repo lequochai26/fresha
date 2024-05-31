@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 
 export const sideBarButtonStyle: string = "";
@@ -15,10 +16,10 @@ export default function SidebarButton({ content, href, tooltip, tooltipId, class
     // Design:
     return (
         <>
-            <a href={href} className={`block aspect-square rounded-lg cursor-pointer ${ !selected ? "hover:bg-[#404753]" : "bg-[#6950f3]" } p-2 fill-white ${className}`} data-tooltip-id={tooltipId} data-tooltip-content={tooltip}>
+            <Link to={href} className={`block aspect-square rounded-lg cursor-pointer ${ !selected ? "hover:bg-[#404753]" : "bg-[#6950f3]" } p-2 fill-white ${className}`} data-tooltip-id={tooltipId} data-tooltip-content={tooltip}>
                 {/* Content */}
                 { content }
-            </a>
+            </Link>
             <Tooltip id={tooltipId} />
         </>
     );

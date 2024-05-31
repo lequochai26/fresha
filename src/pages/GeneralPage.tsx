@@ -36,22 +36,24 @@ export default function GeneralPage() {
                 />
             </div>
 
-            {/* Body */}
-            <div className="flex-1 flex flex-row overflow-hidden">
-                {/* Side bar */}
-                <div className="bg-[#0d1619] h-full w-fit overflow-y-scroll flex flex-col justify-start items-center sidebar">
-                    {/* Sidebar buttons embedding */}
-                    {
-                        getSidebarButtons()
-                            .map(
-                                props => SidebarButton(props)
-                            )
-                    }
-                </div>
+            {/* Router working area */}
+            <BrowserRouter>
 
-                {/* View area */}
-                <div className="flex-1">
-                    <BrowserRouter>
+                {/* Body */}
+                <div className="flex-1 flex flex-row overflow-hidden">
+                    {/* Side bar */}
+                    <div className="bg-[#0d1619] h-full w-fit overflow-y-scroll flex flex-col justify-start items-center sidebar">
+                        {/* Sidebar buttons embedding */}
+                        {
+                            getSidebarButtons()
+                                .map(
+                                    props => SidebarButton(props)
+                                )
+                        }
+                    </div>
+
+                    {/* View area */}
+                    <div className="flex-1">
                         <Routes>
                             {/* Routes embedding */}
                             {
@@ -66,9 +68,10 @@ export default function GeneralPage() {
                                     )
                             }
                         </Routes>
-                    </BrowserRouter>
+                    </div>
                 </div>
-            </div>
+                
+            </BrowserRouter>
         </div>
     );
 }
