@@ -25,7 +25,7 @@ const sidebarButtons: SidebarButtonProperties[] = [
     /* Calendars button */
     {
         content: <img src={calendarIcon} alt="Calendars" className="w-8 h-8"/>,
-        href: "/",
+        href: "/calendars",
         tooltip: "Calendars",
         tooltipId: "btnCalendars",
         className: "mx-2 mb-3"
@@ -34,7 +34,7 @@ const sidebarButtons: SidebarButtonProperties[] = [
     /* Sales button */
     {
         content: <img src={salesIcon} alt="Sales" className="w-8 h-8"/>,
-        href: "/",
+        href: "/sales",
         tooltip: "Sales",
         tooltipId: "btnSales",
         className: "mx-2 mb-3"
@@ -43,7 +43,7 @@ const sidebarButtons: SidebarButtonProperties[] = [
     /* Clients button */
     {
         content: <img src={clientsIcon} alt="Clients" className="w-8 h-8"/>,
-        href: "/",
+        href: "/clients",
         tooltip: "Clients",
         tooltipId: "btnClients",
         className: "mx-2 mb-3"
@@ -52,7 +52,7 @@ const sidebarButtons: SidebarButtonProperties[] = [
     /* Catalogue button */
     {
         content: <img src={catalogueIcon} alt="Catalogue" className="w-8 h-8"/>,
-        href: "/",
+        href: "/catalogue",
         tooltip: "Catalogue",
         tooltipId: "btnCatalogue",
         className: "mx-2 mb-3"
@@ -61,7 +61,7 @@ const sidebarButtons: SidebarButtonProperties[] = [
     /* Online profile button */
     {
         content: <img src={onlineProfileIcon} alt="Online profile" className="w-8 h-8"/>,
-        href: "/",
+        href: "/online_profile",
         tooltip: "Online profile",
         tooltipId: "btnOnlineProfile",
         className: "mx-2 mb-3"
@@ -70,7 +70,7 @@ const sidebarButtons: SidebarButtonProperties[] = [
     /* Marketing button */
     {
         content: <img src={marketingIcon} alt="Marketing" className="w-8 h-8"/>,
-        href: "/",
+        href: "/marketing",
         tooltip: "Marketing",
         tooltipId: "btnMarketing",
         className: "mx-2 mb-3"
@@ -79,7 +79,7 @@ const sidebarButtons: SidebarButtonProperties[] = [
     /* Payments button */
     {
         content: <img src={paymentsIcon} alt="Payments" className="w-8 h-8"/>,
-        href: "/",
+        href: "/payments",
         tooltip: "Payments",
         tooltipId: "btnPayments",
         className: "mx-2 mb-3"
@@ -88,7 +88,7 @@ const sidebarButtons: SidebarButtonProperties[] = [
     /* Teams button */
     {
         content: <img src={teamsIcon} alt="Teams" className="w-8 h-8"/>,
-        href: "/",
+        href: "/teams",
         tooltip: "Teams",
         tooltipId: "btnTeams",
         className: "mx-2 mb-3"
@@ -97,7 +97,7 @@ const sidebarButtons: SidebarButtonProperties[] = [
     /* Reports button */
     {
         content: <img src={reportsIcon} alt="Reports" className="w-8 h-8"/>,
-        href: "/",
+        href: "/reports",
         tooltip: "Reports",
         tooltipId: "btnReports",
         className: "mx-2 mb-3"
@@ -106,7 +106,7 @@ const sidebarButtons: SidebarButtonProperties[] = [
     /* Add-ons button */
     {
         content: <img src={addonsIcon} alt="Add-ons" className="w-8 h-8"/>,
-        href: "/",
+        href: "/addons",
         tooltip: "Add-ons",
         tooltipId: "btnAddons",
         className: "mx-2 mb-3"
@@ -115,7 +115,7 @@ const sidebarButtons: SidebarButtonProperties[] = [
     /* Business settings button */
     {
         content: <img src={businessSettings} alt="Business Settings" className="w-8 h-8"/>,
-        href: "/",
+        href: "/business_settings",
         tooltip: "Business Settings",
         tooltipId: "btnBusinessSettings",
         className: "mx-2 mb-3"
