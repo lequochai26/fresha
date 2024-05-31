@@ -3,10 +3,10 @@ import ProfileButton from "../components/ProfileButton";
 import User from "../models/User";
 import freshaLogo from '../icons/fresha.svg';
 import SidebarButton from "../components/SidebarButton";
-import NotFoundView from "../views/NotFoundView";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import getHeaderBarButtons from "../data/HeaderBarButtons";
 import getSidebarButtons from "../data/SidebarButtons";
+import routes from "../views/routes";
 
 export default function GeneralPage() {
     // Design
@@ -53,10 +53,18 @@ export default function GeneralPage() {
                 <div className="flex-1">
                     <BrowserRouter>
                         <Routes>
-                            <Route
-                                path="/"
-                                Component={NotFoundView}
-                            />
+                            {/* Routes embedding */}
+                            {
+                                Object.keys(routes)
+                                    .map(
+                                        route => (
+                                            <Route
+                                                path={route}
+                                                Component={routes[route]}
+                                            />
+                                        )
+                                    )
+                            }
                         </Routes>
                     </BrowserRouter>
                 </div>
